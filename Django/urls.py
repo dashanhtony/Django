@@ -19,3 +19,11 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+from django.conf.urls import url
+from . import view
+
+urlpatterns = [
+    url(r'^hello$', view.hello),
+    url(r'^base$', view.base),
+    url(r'^hello2$', view.hello2),
+    ]

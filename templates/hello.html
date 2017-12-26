@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Hello {{ user }}</title>
+</head>
+<body>
+<h1>{{ hello }}</h1>
+<h1>{{ hello2 }}</h1>
+{% for athlete in athlete_list %}
+    <h1>{{ athlete.name }}</h1>
+    <ul>
+        {% for sport in athlete.sports_played %}
+            <li>{{ sport }}</li>
+        {% endfor %}
+    </ul>
+{% endfor %}
+{% ifequal user currentuser %}
+    <h1>Welcome! {{ user }}</h1>
+{% else %}
+    <h1>Welcome {{ currentuser }}</h1>
+{% endifequal %}
+</body>
+</html>

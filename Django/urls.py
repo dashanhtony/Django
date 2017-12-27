@@ -19,11 +19,14 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
-from django.conf.urls import url
-from . import view
+
+from django.conf.urls import *
+from . import view,testdb
 
 urlpatterns = [
     url(r'^hello$', view.hello),
     url(r'^base$', view.base),
     url(r'^hello2$', view.hello2),
-    ]
+    url(r'^hello$', view.hello),
+    url(r'^testdb$', testdb.testdb),
+]
